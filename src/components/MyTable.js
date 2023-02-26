@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TableSortLabel } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TableSortLabel, TextField } from '@material-ui/core';
 
 function MyTable() {
   const [data, setData] = useState([]);
@@ -20,8 +20,8 @@ function MyTable() {
     setActiveColumn(column);
   };
 
-  const handleRowClick = (index) => {
-    setSelectedRow(index);
+  const handleRowClick = (row) => {
+    setSelectedRow(row);
   };
 
   const sortedData = data.sort((a, b) => {
@@ -83,7 +83,7 @@ function MyTable() {
         </TableHead>
         <TableBody>
           {sortedData.map((row, index) => (
-            <TableRow key={index} onClick={() => handleRowClick(index)} selected={selectedRow === index}>
+            <TableRow key={index} onClick={() => handleRowClick(row)}>
               <TableCell>{row.field1}</TableCell>
               <TableCell>{row.cat}</TableCell>
               <TableCell>{row.tn}</TableCell>
@@ -92,8 +92,20 @@ function MyTable() {
           ))}
         </TableBody>
       </Table>
+      {selectedRow && (
+        <TextField
+          label="Time Stamp"
+          value={selectedRow.ts}
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+      )}
     </TableContainer>
   );
 }
 
 export default MyTable;
+
