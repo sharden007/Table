@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TableSortLabel } from '@material-ui/core';
 
-function MyTable() {
+function MyTable2() {
   const [data, setData] = useState([]);
   const [sortDirection, setSortDirection] = useState('asc');
   const [activeColumn, setActiveColumn] = useState('');
@@ -44,7 +44,7 @@ function MyTable() {
                 direction={sortDirection}
                 onClick={() => handleSortClick('field1')}
               >
-                AA
+                Action Alerts
               </TableSortLabel>
             </TableCell>
             <TableCell>
@@ -90,6 +90,4 @@ function MyTable() {
     </TableContainer>
   );
 }
-
-export default MyTable;
-
+export default MyTable2;
