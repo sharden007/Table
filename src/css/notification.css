@@ -1,0 +1,15 @@
+/* styles for notification text row */
+/* all styles that in parent css work, so can use colors that are in the parent css */
+
+.alert{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.alert-container>.alert:hover{
+    cursor: pointer;
+    background-color: var(--light-blue);
+}
+
+

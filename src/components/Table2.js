@@ -80,7 +80,7 @@ function MyTable() {
                   direction={sortDirection}
                   onClick={() => handleSortClick('AA')}
                 >
-                  AA
+                  Action Alerts
                 </TableSortLabel>
               </TableCell>
               <TableCell>

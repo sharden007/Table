@@ -1,0 +1,62 @@
+/* notification window */
+.prior-notification{
+    padding-right: 0.8em;
+    border-radius: 0.2em;
+}
+
+.alert-area-window{
+    height: 100vh;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+
+
+
+}
+.alert-btn-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.alert-action{
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert-stats{
+    border: var(--strap-primary) solid 2px;
+    border-radius: 0.5em;
+    padding-right: 1em;
+    padding-left: 0.3em;
+    background-color: var(--form-backround);
+}
+
+.alert-container{
+    height:90vh;
+    background-color: var(--form-backround);
+    border-radius: 0.2em;
+    overflow-y: scroll;
+}
+
+
+
+/* Track, scroll bar styling */
+
+::-webkit-scrollbar {
+    width: 0.8em;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--strap-primary); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue); 
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--strap-primary-hover); 
+    cursor: pointer;
+}
