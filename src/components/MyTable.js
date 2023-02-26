@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TableSortLabel, TextField } from '@material-ui/core';
+import "../css/style.css";
 
 function MyTable() {
   const [data, setData] = useState([]);
@@ -83,7 +84,7 @@ function MyTable() {
         </TableHead>
         <TableBody>
           {sortedData.map((row, index) => (
-            <TableRow key={index} onClick={() => handleRowClick(row)}>
+            <TableRow key={index} onClick={() => handleRowClick(row)} className={selectedRow === row ? 'selected' : ''}>
               <TableCell>{row.field1}</TableCell>
               <TableCell>{row.cat}</TableCell>
               <TableCell>{row.tn}</TableCell>
@@ -108,4 +109,3 @@ function MyTable() {
 }
 
 export default MyTable;
-
