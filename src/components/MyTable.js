@@ -6,6 +6,7 @@ function MyTable() {
   const [data, setData] = useState([]);
   const [sortDirection, setSortDirection] = useState('asc');
   const [activeColumn, setActiveColumn] = useState('');
+  const [selectedRow, setSelectedRow] = useState(null);
 
   useEffect(() => {
     axios.get('/data.json')
@@ -17,6 +18,10 @@ function MyTable() {
     const isAsc = activeColumn === column && sortDirection === 'asc';
     setSortDirection(isAsc ? 'desc' : 'asc');
     setActiveColumn(column);
+  };
+
+  const handleRowClick = (index) => {
+    setSelectedRow(index);
   };
 
   const sortedData = data.sort((a, b) => {
@@ -78,7 +83,7 @@ function MyTable() {
         </TableHead>
         <TableBody>
           {sortedData.map((row, index) => (
-            <TableRow key={index}>
+            <TableRow key={index} onClick={() => handleRowClick(index)} selected={selectedRow === index}>
               <TableCell>{row.field1}</TableCell>
               <TableCell>{row.cat}</TableCell>
               <TableCell>{row.tn}</TableCell>
@@ -92,4 +97,3 @@ function MyTable() {
 }
 
 export default MyTable;
-

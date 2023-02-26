@@ -3,19 +3,22 @@
       "field1": "Value 1A",
       "cat": "Value 2A",
       "tn": "Value 3A",
-      "id": "2341"
+      "id": "2341",
+      "ts": "12:45.000UTC"
     },
     {
       "field1": "Value 1B",
       "cat": "Value 2B",
       "tn": "Value 3B",
-      "id": "1412"
+      "id": "1412",
+      "ts": "12:45.000UTC"
     },
     {
       "field1": "Value 1C",
       "cat": "Value 2C",
       "tn": "Value 3C",
-      "id": "4312"
+      "id": "4312",
+      "ts": "12:45.000UTC"
     
     }
   ]
